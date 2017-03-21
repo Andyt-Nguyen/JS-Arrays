@@ -29,13 +29,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
-	//-----------------------------Uncomment when done---------------
-// function looper(family){
-// 	for(var i = 0; i < family.length; i++){
-// 		alert(family[i]);
-// 	}
-// }
-// console.log(looper(family));
+function looper(family){
+	for(var i = 0; i < family.length; i++){
+		alert(family[i]);
+	}
+}
+console.log(looper(family));
 
 //Next problem
 
@@ -45,15 +44,14 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
-	//----------------------------------Uncomment when done------------
-// 	function reversedLooper(letter){
-// 		letter = letter.reverse();
-// 		for(var i = 0; i < letter.length; i++){
-// 			alert(letter[i]);
-// 		}
-// 		return letter;
-// 	}
-// console.log(reversedLooper(letters));
+	function reversedLooper(letter){
+		letter = letter.reverse();
+		for(var i = 0; i < letter.length; i++){
+			alert(letter[i]);
+		}
+		return letter;
+	}
+console.log(reversedLooper(letters));
 //Next Problem
 
 
@@ -163,20 +161,20 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 
-////////////////////////////--------Uncomment When DONE
+
   //Code Here
-	// function removeItem(food, remove){
-	// 	for(var i = 0; i < food.length; i++){
-	// 		if(food[i] === remove){
-	// 			food.splice(food[i],1);
-	// 		}
-	// 	}
-	// }
-	// console.log(myGroceryList);
-	// console.log(removeItem(myGroceryList,'chips'));
-	// console.log(myGroceryList);
-//removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-//addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+	function removeItem(food, remove){
+		for(var i = 0; i < food.length; i++){
+			if(food[i] === remove){
+				food.splice(food[i],1);
+			}
+		}
+	}
+	console.log(myGroceryList);
+	console.log(removeItem(myGroceryList,'chips'));
+	console.log(myGroceryList);
+removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
 
 
@@ -196,8 +194,13 @@ console.log(myGroceryList);
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
-
-
+	var superArray = []
+	function maker(arr){
+		var numMaker = Math.floor(Math.random()*215)
+		superArray.push(numMaker);
+		return superArray
+	}
+	console.log(maker(superArray));
 
 //Next Problem
 
